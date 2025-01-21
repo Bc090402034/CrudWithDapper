@@ -1,0 +1,33 @@
+﻿@model IList<WadE16Crud.Models.AppUsers>
+@{
+    ViewBag.Title = "Index";
+}
+<a href="~/users/create">Create</a>
+<h2>List of Users</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>username</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var i in Model)
+        {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Username</td>
+                <td>@i.Name</td>
+                <td>
+                    <a href="~/users/edit/@i.Id">Edit</a>
+                    <a href="~/users/delete/@i.Id">Delete</a>
+                 
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

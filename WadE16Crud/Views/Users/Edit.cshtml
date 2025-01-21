@@ -1,0 +1,16 @@
+﻿@model WadE16Crud.Models.AppUsers
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <label>Username</label>
+    <input type="text" name="Username" value="@Model.Username" /><br />
+    <label>Password</label>
+    <input type="password" name="Password" value="@Model.Password" /><br />
+    <label>Name</label>
+    <input type="text" name="Name" value="@Model.Name" /><br />
+    <input type="submit" />
+</form>
